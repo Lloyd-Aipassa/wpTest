@@ -45,27 +45,6 @@ console.log(toRaw(data.value.offers))
 </script>
 
 <template>
-    <div>
-
-     <p>{{ data.offers[2].company_name }}</p>   
-     <p>{{ data.offers[2].slug }}</p>   
-     <p>{{ data.offers[2].id }}</p>   
-     <p>{{ data.offers[2].location }}</p>   
-     <p>{{ data.offers[2].category_code }}</p>     
-     <p>{{ data.offers[2].description }}</p>     
-     <p v-html="data.offers[2].description"></p>   
-       
-
-   
-        <!-- <h1>{{ data[1].title.rendered }}</h1>
-        <span v-html="data[1].content.rendered"></span>
-
-        <NuxtLink :to="`/blog/${data[0].slug}`">
-            {{ data[0].title.rendered }}
-        </NuxtLink><br>
-        <NuxtLink to="/blog">
-            Blogs
-        </NuxtLink> -->
-    </div>
+   test
 </template>
 
