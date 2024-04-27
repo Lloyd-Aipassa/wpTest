@@ -1,6 +1,7 @@
 <script setup>
 
-const { data } = await useFetch(`https://rocketsourcers.recruitee.com/api/offers/`, {})
+const { data } = await useFetch(`https://siberischekateu.recruitee.com/api/offers/`, {})
+// const { data } = await useFetch(`https://rocketsourcers.recruitee.com/api/offers/`, {})
 
 console.log(toRaw(data.value))
 
@@ -43,6 +44,7 @@ console.log(toRaw(data.value))
                 <h2>{{ d.title }}</h2><br>
                 <p>{{ d.country }}</p>
                 <p>{{ d.location }}</p><br>
+                <p>{{ d.company_name }}</p><br>
 
 
                 <NuxtLink :to="`/blog/${d.slug}`">bekijk vacature</NuxtLink>
