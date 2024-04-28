@@ -31,7 +31,7 @@ const handleSubmit = async (event) => {
 
         const data = await response.text();
         // Toon een succesbericht of voer andere acties uit
-        resultMessage.value = "<p>Bedankt voor het indienen van uw gegevens!</p>";
+        resultMessage.value = "Bedankt voor het indienen van uw gegevens!";
         event.target.reset();
     } catch (error) {
         // Handel fouten af
@@ -72,7 +72,10 @@ const handleSubmit = async (event) => {
             <input type="file" id="cv" name="candidate[cv]" accept=".pdf,.doc,.docx" required><br><br>
             <input type="submit" value="Verzenden">
         </form>
-        <div id="result" v-html="resultMessage"></div>
+        <div id="result" style="color:blue;font-size:46px;">
+            <p>{{ resultMessage }}</p>
+        </div>
+        <!-- <div id="result" v-html="resultMessage"></div> -->
         <!-- <NuxtLink :to="`${data.offer.careers_apply_url}`">Apply</NuxtLink> -->
     </div>
 </template>
