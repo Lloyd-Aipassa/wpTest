@@ -4,7 +4,7 @@ export default defineNuxtConfig({
 
   routeRules: {    
     // Static page generated on-demand, revalidates in background (ISG)   
-    '/blog/**': { swr: true },    
+    // '/blog/**': { swr: true },    
     // '/blog/**': { prerender: true },    
 
 // Static page generated on-demand once (SSG - or at least mighty close)    
@@ -13,5 +13,6 @@ export default defineNuxtConfig({
 // Render these routes on the client (SPA)
 // '/blog/**': { ssr: false },    
 },
+ssr: true,
 
 })
