@@ -43,36 +43,38 @@ const handleSubmit = async (event) => {
 </script>
 
 <template>
-<h1>Functieomschrijving</h1>
+    <div>
+        <h1>Functieomschrijving</h1>
 
-<h2>{{ data.offer.title }}</h2><br>
-                <p>{{ data.offer.country }}</p>
-                <p>{{ data.offer.location }}</p><br>
-                <p>{{ data.offer.company_name }}</p><br>
-                <p>{{ data.offer.salary.max }}</p><br>
+        <h2>{{ data.offer.title }}</h2><br>
+        <p>{{ data.offer.country }}</p>
+        <p>{{ data.offer.location }}</p><br>
+        <p>{{ data.offer.company_name }}</p><br>
+        <p>{{ data.offer.salary.max }}</p><br>
 
-            
-   <span v-html="data.offer.description"></span>
-   <span v-html="data.offer.requirements"></span>
 
-   <form id="candidateForm" :action="pageSlug" method="post" enctype="multipart/form-data" @submit.prevent="handleSubmit">
-    			<label for="name">Naam:</label><br>
-    			<input type="text" id="name" name="candidate[name]" required><br>
-    			<label for="email">E-mail:</label><br>
-    			<input type="email" id="email" name="candidate[email]" required><br>
-    			<label for="phone">Telefoonnummer:</label><br>
-    			<input type="tel" id="phone" name="candidate[phone]" required><br>
-    			<label for="photo">Foto:</label><br>
-    			<input type="file" id="photo" name="candidate[photo]" accept="image/*" required><br>
-    			<label for="cover_letter">Sollicitatiebrief:</label><br>
-    			<textarea id="cover_letter" name="candidate[cover_letter]" required></textarea><br>
-    			<label for="cv">CV:</label><br>
-    			<input type="file" id="cv" name="candidate[cv]" accept=".pdf,.doc,.docx" required><br><br>
-    			<input type="submit" value="Verzenden">
-			</form>
-            <div id="result" v-html="resultMessage"></div>
-   <!-- <NuxtLink :to="`${data.offer.careers_apply_url}`">Apply</NuxtLink> -->
+        <span v-html="data.offer.description"></span>
+        <span v-html="data.offer.requirements"></span>
 
+        <form id="candidateForm" :action="pageSlug" method="post" enctype="multipart/form-data"
+            @submit.prevent="handleSubmit">
+            <label for="name">Naam:</label><br>
+            <input type="text" id="name" name="candidate[name]" required><br>
+            <label for="email">E-mail:</label><br>
+            <input type="email" id="email" name="candidate[email]" required><br>
+            <label for="phone">Telefoonnummer:</label><br>
+            <input type="tel" id="phone" name="candidate[phone]" required><br>
+            <label for="photo">Foto:</label><br>
+            <input type="file" id="photo" name="candidate[photo]" accept="image/*" required><br>
+            <label for="cover_letter">Sollicitatiebrief:</label><br>
+            <textarea id="cover_letter" name="candidate[cover_letter]" required></textarea><br>
+            <label for="cv">CV:</label><br>
+            <input type="file" id="cv" name="candidate[cv]" accept=".pdf,.doc,.docx" required><br><br>
+            <input type="submit" value="Verzenden">
+        </form>
+        <div id="result" v-html="resultMessage"></div>
+        <!-- <NuxtLink :to="`${data.offer.careers_apply_url}`">Apply</NuxtLink> -->
+    </div>
 </template>
 
 <style scoped>
